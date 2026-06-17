@@ -99,7 +99,7 @@ O sparkle ✦ de quatro pontas é o glifo assinatura da Spellbound:
 - **Arquivo principal:** `marca/assets/spellbound-logo-card.jpg`
 - **Artwork original:** `marca/assets/Spelbound-Marketing.jpg` (logo lockup sobre maroon 1920×1080)
 - **Mark SVG:** `marca/spellbound-mark.svg`
-- **Nota de spelling:** o artwork usa "SPELBOUND" (um L) — confirmar qual é o canônico
+- **Spelling canônico: Spellbound** (dois L). O artwork original usa "SPELBOUND" (erro tipográfico) — ignorar; usar sempre "Spellbound"
 - **Versão pra fundo escuro:** usar logo sobre maroon (padrão)
 - **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentação
 - **Tamanho sugerido:** largura 120–200px nos HTMLs
