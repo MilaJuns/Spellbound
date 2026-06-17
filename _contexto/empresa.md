@@ -1,7 +1,8 @@
 # Contexto da Empresa — Spellbound Marketing
 
 **Nome:** Mila Juns
-**Negócio:** Spellbound Marketing
+**Negócio:** Spellbound Marketing (SM)
+**Tagline:** Strategy that captivates.
 **O que faz:** Marketing strategy studio focado nos Países Baixos. Atende 100% online pequenos negócios, profissionais autônomos e equipes pequenas que precisam comunicar valor real e construir presença digital com método.
 **Perfil:** freelancer / solopreneur
 **Atende clientes:** Sim — clientes externos nos Países Baixos
@@ -25,5 +26,11 @@
 ## Público-alvo (ICP)
 
 Países Baixos: brasileiros empreendendo na Holanda e negócios locais atendendo comunidade internacional. Canais prioritários: Google/Maps + reviews e Instagram.
+
+### Momento do cliente (framework para qualificar e comunicar)
+
+- **Starting** — precisa de posicionamento e direção
+- **Stabilizing** — precisa de consistência e processos
+- **Growing** — precisa de previsibilidade, delegação, padronização
 
 ## Contexto adicional
