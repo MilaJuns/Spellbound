@@ -1,0 +1,26 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .card{ display:flex; flex-direction:column; gap:16px; justify-content:center; }
+  .btn { font-family:var(--font-body); font-weight:600; font-size:15px; border:none; cursor:pointer; padding:13px 26px; border-radius:var(--radius-pill); display:inline-flex; align-items:center; gap:9px; }
+  .btn .s { width:15px;height:15px; }
+  .primary { background:var(--orange-500); color:var(--cream-50); box-shadow:var(--shadow-accent); }
+  .secondary { background:transparent; color:var(--cream-100); border:1.5px solid var(--amber-tint-strong); }
+  .ghost { background:transparent; color:var(--orange-400); padding-left:8px; padding-right:8px; }
+  .tag { font-size:11px; color:var(--cream-400); margin-bottom:-6px; }
+</style></head>
+<body><div class="card">
+  <div class="tag">Default</div>
+  <div class="row">
+    <button class="btn primary"><svg class="s" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"/></svg>Book a strategy call</button>
+    <button class="btn secondary">Our work</button>
+    <button class="btn ghost">Learn more →</button>
+  </div>
+  <div class="tag">Hover</div>
+  <div class="row">
+    <button class="btn primary" style="background:#FF7A26">Book a strategy call</button>
+    <button class="btn secondary" style="border-color:#F95F00;color:#FFA866">Our work</button>
+    <button class="btn ghost" style="color:#FFA866">Learn more →</button>
+  </div>
+</div></body></html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .sw { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--amber-tint); }
+  .sw .chip { height: 70px; display:flex; align-items:flex-end; padding:8px; }
+  .star { width:20px;height:20px;color:rgba(26,0,0,.7); }
+  .sw .meta { padding: 8px 10px; background: var(--maroon-900); }
+  .sw .name { font-size: 12px; font-weight: 700; color: var(--cream-100); }
+  .sw .hex { font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: var(--cream-400); margin-top: 2px; }
+  .note { margin-top:14px; color:var(--fg3); font-size:12px; }
+  .note b { color: var(--orange-400); font-weight:600; }
+</style></head>
+<body><div class="card">
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#FF7A26"></div><div class="meta"><div class="name">orange-400 ·hover</div><div class="hex">#FF7A26</div></div></div>
+    <div class="sw"><div class="chip" style="background:#F95F00"><svg class="star" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"/></svg></div><div class="meta"><div class="name">orange-500 ·primary</div><div class="hex">#F95F00</div></div></div>
+    <div class="sw"><div class="chip" style="background:#B8500A"></div><div class="meta"><div class="name">orange-600 ·press</div><div class="hex">#B8500A</div></div></div>
+    <div class="sw"><div class="chip" style="background:#D4600A"></div><div class="meta"><div class="name">amber-500 ·MJ</div><div class="hex">#D4600A</div></div></div>
+    <div class="sw"><div class="chip" style="background:#510000;border-right:none"><span style="width:100%;height:2px;background:rgba(212,96,10,0.45);align-self:center"></span></div><div class="meta"><div class="name">amber border</div><div class="hex">rgba .18</div></div></div>
+  </div>
+  <div class="note">The <b>sparkle orange</b> is the hero accent (CTAs, the mark); <b>amber</b> handles labels and the signature thin hairline borders — used sparingly against deep maroon.</div>
+</div></body></html>

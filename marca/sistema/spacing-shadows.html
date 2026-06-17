@@ -1,0 +1,18 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .grid { display:flex; gap:26px; align-items:center; padding:8px 4px; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .box { width:96px; height:70px; background:var(--cream-100); border-radius:var(--radius-md); }
+  .lbl2 { font-size:11px; color:var(--ink-700); font-weight:600; }
+  .tok { font-family:"JetBrains Mono",monospace; font-size:10px; color:var(--maroon-500); }
+</style></head>
+<body><div class="card card--cream">
+  <div class="grid">
+    <div class="item"><div class="box" style="box-shadow:0 1px 2px rgba(40,0,0,0.20)"></div><div class="lbl2">shadow-sm</div></div>
+    <div class="item"><div class="box" style="box-shadow:0 8px 24px rgba(40,0,0,0.28)"></div><div class="lbl2">shadow-md</div></div>
+    <div class="item"><div class="box" style="box-shadow:0 20px 56px rgba(40,0,0,0.36)"></div><div class="lbl2">shadow-lg</div></div>
+    <div class="item"><div class="box" style="box-shadow:0 10px 30px rgba(249,95,0,0.32)"></div><div class="lbl2" style="color:#D44E00">shadow-accent</div></div>
+  </div>
+</div></body></html>

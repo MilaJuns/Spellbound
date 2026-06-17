@@ -1,0 +1,30 @@
+/* Shared framing for Design System preview cards */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--fg1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.card {
+  padding: 22px 26px;
+  min-height: 100%;
+}
+.card--cream { background: var(--cream-100); }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.col { display: flex; flex-direction: column; }
+.lbl {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--fg3);
+  font-weight: 500;
+}
+.mono-sm {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+}

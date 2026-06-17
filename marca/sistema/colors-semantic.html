@@ -1,0 +1,37 @@
+<!-- @dsCard group="Colors" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .wrap { display:grid; grid-template-columns: 1fr 1fr; gap:0; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--amber-tint); }
+  .pane { padding:18px; }
+  .pane.dark { background:var(--maroon-800); }
+  .pane.light { background:var(--cream-100); }
+  .ttl { font-family:var(--font-display); font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:12px; }
+  .dark .ttl { color:var(--cream-300); }
+  .light .ttl { color:var(--ink-700); }
+  .line { display:flex; align-items:center; gap:10px; margin-bottom:9px; }
+  .dot { width:22px; height:22px; border-radius:6px; flex:none; }
+  .tok { font-family:"JetBrains Mono",monospace; font-size:11px; }
+  .dark .tok { color:var(--cream-200); }
+  .light .tok { color:var(--ink-900); }
+</style></head>
+<body>
+  <div class="wrap">
+    <div class="pane dark">
+      <div class="ttl">Dark · default</div>
+      <div class="line"><span class="dot" style="background:#510000;border:1px solid rgba(212,96,10,.45)"></span><span class="tok">--bg</span></div>
+      <div class="line"><span class="dot" style="background:#3A0000"></span><span class="tok">--surface</span></div>
+      <div class="line"><span class="dot" style="background:#F5EDE0"></span><span class="tok">--fg1</span></div>
+      <div class="line"><span class="dot" style="background:rgba(245,237,224,.66)"></span><span class="tok">--fg2</span></div>
+      <div class="line"><span class="dot" style="background:#F95F00"></span><span class="tok">--accent</span></div>
+    </div>
+    <div class="pane light">
+      <div class="ttl">Light · [data-theme]</div>
+      <div class="line"><span class="dot" style="background:#F5EDE0;border:1px solid #E2D5BE"></span><span class="tok">--bg</span></div>
+      <div class="line"><span class="dot" style="background:#fff;border:1px solid #E2D5BE"></span><span class="tok">--surface</span></div>
+      <div class="line"><span class="dot" style="background:#2A0B0B"></span><span class="tok">--fg1</span></div>
+      <div class="line"><span class="dot" style="background:#5A3232"></span><span class="tok">--fg2</span></div>
+      <div class="line"><span class="dot" style="background:#F95F00"></span><span class="tok">--accent</span></div>
+    </div>
+  </div>
+</body></html>

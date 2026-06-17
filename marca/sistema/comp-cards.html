@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .card{ display:flex; gap:16px; align-items:stretch; }
+  .c { flex:1; border-radius:var(--radius-lg); padding:20px; }
+  .dark { background:var(--maroon-900); border:1px solid var(--amber-tint); }
+  .light { background:#fff; box-shadow:var(--shadow-md); }
+  .star { width:26px; height:26px; color:var(--orange-500); margin-bottom:12px; }
+  .ch3 { font-family:var(--font-display); font-weight:700; font-size:19px; letter-spacing:.01em; margin:0 0 7px; }
+  .dark .ch3 { color:var(--cream-100); }
+  .light .ch3 { color:var(--ink-900); }
+  .cp { font-family:var(--font-body); font-size:13px; line-height:1.55; margin:0; }
+  .dark .cp { color:var(--cream-300); }
+  .light .cp { color:var(--ink-700); }
+</style></head>
+<body><div class="card">
+  <div class="c dark">
+    <svg class="star" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"/></svg>
+    <h3 class="ch3">Brand Strategy</h3>
+    <p class="cp">Positioning, voice and direction that make you the obvious choice.</p>
+  </div>
+  <div class="c light">
+    <svg class="star" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"/></svg>
+    <h3 class="ch3">Campaigns</h3>
+    <p class="cp">Full-funnel campaigns built on method — attention that converts.</p>
+  </div>
+</div></body></html>

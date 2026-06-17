@@ -1,0 +1,18 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .card{ display:flex; flex-direction:column; gap:14px; justify-content:center; }
+  .field { display:flex; flex-direction:column; gap:6px; max-width:300px; }
+  label { font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--cream-300); text-transform:uppercase; }
+  input { font-family:var(--font-body); font-size:15px; padding:12px 15px; border-radius:var(--radius-md); background:var(--maroon-900); border:1.5px solid var(--amber-tint-strong); color:var(--cream-100); outline:none; }
+  input::placeholder { color:var(--cream-400); }
+  .focused { border-color:var(--orange-500); box-shadow:0 0 0 3px rgba(249,95,0,.18); }
+  .lay { display:flex; gap:18px; flex-wrap:wrap; }
+</style></head>
+<body><div class="card">
+  <div class="lay">
+    <div class="field"><label>Default</label><input placeholder="you@company.com"></div>
+    <div class="field"><label>Focus</label><input class="focused" value="hello@brand.co"></div>
+  </div>
+</div></body></html>

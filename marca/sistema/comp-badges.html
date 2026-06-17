@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="card.css">
+<style>
+  .card{ display:flex; flex-direction:column; gap:18px; justify-content:center; }
+  .badge { display:inline-flex; align-items:center; gap:7px; font-family:var(--font-body); font-weight:600; font-size:12px; letter-spacing:.04em; padding:6px 14px; border-radius:var(--radius-pill); }
+  .solid { background:var(--orange-500); color:var(--cream-50); }
+  .soft { background:rgba(249,95,0,.16); color:var(--orange-400); }
+  .outline { background:transparent; border:1.5px solid var(--amber-tint-strong); color:var(--amber-500); }
+  .s { width:12px; height:12px; color:currentColor; }
+  .divider { display:flex; align-items:center; gap:0; color:var(--orange-500); }
+  .divider svg { height:26px; }
+</style></head>
+<body><div class="card">
+  <div class="row">
+    <span class="badge solid">Featured</span>
+    <span class="badge soft"><svg class="s" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"/></svg>New</span>
+    <span class="badge outline">B2B</span>
+    <span class="badge outline">Social</span>
+  </div>
+  <div class="divider">
+    <svg viewBox="0 0 320 60" fill="currentColor"><circle cx="40" cy="30" r="4"/><circle cx="78" cy="30" r="6.5"/><path d="M160 4 Q165 25 186 30 Q165 35 160 56 Q155 35 134 30 Q155 25 160 4 Z"/><circle cx="242" cy="30" r="6.5"/><circle cx="280" cy="30" r="4"/></svg>
+  </div>
+</div></body></html>
