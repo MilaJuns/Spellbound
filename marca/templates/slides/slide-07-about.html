@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Slides" name="Slide — About / Strategist" subtitle="Founder portrait + bio, photo-split" viewport="1280x720" --><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .photo { position:absolute; left:0; top:0; bottom:0; width:44%; }
+  .photo img { width:100%; height:100%; object-fit:cover; object-position:50% 28%; display:block; }
+  .photo .fade { position:absolute; inset:0; background:linear-gradient(to right, rgba(81,0,0,0) 55%, var(--maroon-800)); }
+  .photo .badge { position:absolute; left:40px; bottom:48px; display:flex; align-items:center; gap:10px; background:var(--maroon-950); border:1px solid var(--amber-tint); border-radius:var(--radius-md); padding:12px 16px; }
+  .photo .badge svg { width:20px; height:20px; color:var(--orange-500); }
+  .photo .badge b { font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--cream-100); display:block; line-height:1; }
+  .photo .badge span { font-family:var(--font-body); font-size:12px; color:var(--cream-400); display:block; margin-top:5px; }
+  .content { position:absolute; left:44%; right:0; top:0; bottom:0; padding:0 92px 0 64px; display:flex; flex-direction:column; justify-content:center; }
+  .content .s-h1 { font-size:46px; margin:12px 0 22px; }
+  .content .s-body { font-size:19px; margin:0 0 16px; max-width:560px; }
+  .stats { display:flex; gap:40px; margin-top:18px; }
+  .stats .n { font-family:var(--font-display); font-weight:700; font-size:38px; color:var(--orange-500); line-height:1; }
+  .stats .l { font-family:var(--font-body); font-size:13.5px; color:var(--cream-300); margin-top:8px; max-width:140px; }
+</style></head>
+<body>
+<div class="slide" data-screen-label="About">
+  <div class="photo">
+    <img src="../assets/photos/founder-portrait.jpeg" alt="Spelbound lead strategist">
+    <div class="fade"></div>
+    <div class="badge"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"/></svg><div><b>Amsterdam</b><span>Strategy studio</span></div></div>
+  </div>
+  <div class="content">
+    <div class="s-eyebrow">Meet the strategist</div>
+    <h2 class="s-h1">A senior partner,<br>not a posting machine.</h2>
+    <p class="s-body">You work directly with the strategist who sets your positioning, shapes the plan and stays close while it ships — clarity first, method over magic.</p>
+    <div class="stats">
+      <div><div class="n">20+</div><div class="l">years in brand &amp; social</div></div>
+      <div><div class="n">2</div><div class="l">countries — BR &amp; NL</div></div>
+      <div><div class="n">1:1</div><div class="l">senior, direct partnership</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

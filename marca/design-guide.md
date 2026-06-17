@@ -43,9 +43,11 @@
 
 - **Títulos / wordmark / display:** Geometry Soft Pro Bold → fallback: Varela Round
   - `font-family: "Varela Round", "Geometry Soft Pro", system-ui, sans-serif`
-  - Geometry Soft Pro está em: `marca/fonts/Geometry_Soft_Pro-Bold_N.otf` *(copiar do design system)*
+  - Geometry Soft Pro: `marca/fonts/Geometry_Soft_Pro-Bold_N.otf`
 - **Corpo / UI / labels:** Nunito (300–800) — Google Fonts
 - **Tagline / pull-quote (uso pontual):** Cormorant Garamond Italic — Google Fonts
+
+**Tokens CSS completos:** `marca/css/colors_and_type.css` — importar em qualquer HTML com `<link rel="stylesheet" href="../../marca/css/colors_and_type.css">`.
 
 **Tracking:**
 - Wordmark: `0.06em`
@@ -75,8 +77,8 @@ Fotos: retratos/lifestyle com luz Northern/Dutch. Aplicar overlay `linear-gradie
 ## Ícone / símbolo de marca
 
 O sparkle ✦ de quatro pontas é o glifo assinatura da Spellbound:
-- Arquivo SVG: `marca/spellbound-mark.svg` *(copiar do design system)*
-- Divisor de seção: `marca/spellbound-sparkle-row.svg` *(copiar do design system)*
+- Arquivo SVG: `marca/spellbound-mark.svg`
+- Divisor de seção: `marca/spellbound-sparkle-row.svg`
 - Usar como bullet, divisor, ícone de card, end-mark, decoração centralizada acima de headlines
 - **Nunca** substituir por emojis genéricos
 
@@ -94,8 +96,8 @@ O sparkle ✦ de quatro pontas é o glifo assinatura da Spellbound:
 
 ## Logo
 
-- **Arquivo principal:** `marca/assets/spellbound-logo-card.jpg` *(copiar do design system)*
-- **Artwork original:** `marca/assets/Spelbound-Marketing.jpg` *(logo lockup sobre maroon 1920×1080)*
+- **Arquivo principal:** `marca/assets/spellbound-logo-card.jpg`
+- **Artwork original:** `marca/assets/Spelbound-Marketing.jpg` (logo lockup sobre maroon 1920×1080)
 - **Mark SVG:** `marca/spellbound-mark.svg`
 - **Nota de spelling:** o artwork usa "SPELBOUND" (um L) — confirmar qual é o canônico
 - **Versão pra fundo escuro:** usar logo sobre maroon (padrão)
@@ -107,7 +109,7 @@ O sparkle ✦ de quatro pontas é o glifo assinatura da Spellbound:
 ## Perfil do autor
 
 - **Nome:** Mila Juns
-- **Foto:** `marca/photos/` *(copiar fotos do design system — frente-01.jpg, frente-02.jpg, etc.)*
+- **Fotos:** `marca/fotos/` — founder-headshot.jpeg, founder-portrait.jpeg, founder-desk.jpeg, founder-mic.jpeg
 - **Badge verificado:** a definir
 
 ---
@@ -119,5 +121,33 @@ Espinha compartilhada: canvas maroon · texto cream · Varela Round + Nunito · 
 O que diferencia a Spellbound: accent **laranja** (não amber) · sparkle ✦ como motif · toque de Cormorant Italic · layout mais arejado · inglês/NL.
 
 ---
+
+## Estrutura da pasta marca/
+
+```
+marca/
+  design-guide.md          ← este arquivo
+  spellbound-mark.svg      ← sparkle mark (4 pontas)
+  spellbound-sparkle-row.svg ← divisor de seção
+  assets/
+    spellbound-logo-card.jpg    ← logo lockup principal
+    Spelbound-Marketing.jpg     ← artwork original (1920×1080)
+  fonts/
+    Geometry_Soft_Pro-Bold_N.otf
+  fotos/
+    founder-headshot.jpeg
+    founder-portrait.jpeg
+    founder-desk.jpeg
+    founder-mic.jpeg
+  css/
+    colors_and_type.css    ← todos os tokens CSS (cores, tipografia, espaçamentos)
+  exports/
+    Spellbound-Flyer-A4.png
+    Spellbound-Square-1080.png
+    Spellbound-Story-1080x1920.png
+  templates/
+    slides/                ← pitch deck (7 slides HTML + slide.css)
+    flyers/                ← flyer options, services infographic, social variations
+```
 
 ## Observações adicionais

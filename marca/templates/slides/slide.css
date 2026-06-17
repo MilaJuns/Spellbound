@@ -1,0 +1,45 @@
+/* Shared base for Spelbound pitch slides — fixed 1280×720 stage */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+.slide {
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+  background: var(--maroon-800);
+  color: var(--cream-200);
+  font-family: var(--font-body);
+}
+.slide--cream { background: var(--cream-100); color: var(--ink-900); }
+.pad { position: absolute; inset: 0; padding: 80px 92px; display: flex; flex-direction: column; }
+
+.s-eyebrow {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange-500);
+}
+.s-h1 {
+  font-family: var(--font-display); font-weight: 700; letter-spacing: 0.01em;
+  line-height: 1.04; color: var(--cream-100); margin: 0;
+}
+.slide--cream .s-h1 { color: var(--ink-900); }
+.s-script { font-family: var(--font-script); font-style: italic; font-weight: 500; }
+.s-body { font-family: var(--font-body); font-size: 22px; line-height: 1.55; color: var(--cream-300); }
+.slide--cream .s-body { color: var(--ink-700); }
+
+/* footer lockup on every slide */
+.s-foot {
+  position: absolute; left: 92px; bottom: 56px; right: 92px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--font-body); font-size: 14px; letter-spacing: 0.04em;
+  color: var(--maroon-500);
+}
+.slide--cream .s-foot { color: var(--cream-400); }
+.s-foot .wm {
+  font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; font-size: 15px; color: var(--cream-300);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.slide--cream .s-foot .wm { color: var(--ink-700); }
+.s-foot .wm svg { width: 16px; height: 16px; color: var(--orange-500); }

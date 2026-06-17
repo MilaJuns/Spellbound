@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="currentColor" role="img" aria-label="Spelbound sparkle crown">
+  <circle cx="30" cy="30" r="5"></circle>
+  <circle cx="68" cy="30" r="8.5"></circle>
+  <path d="M120 4 L128 22 L146 30 L128 38 L120 56 L112 38 L94 30 L112 22 Z"></path>
+  <circle cx="172" cy="30" r="8.5"></circle>
+  <circle cx="210" cy="30" r="5"></circle>
+</svg>

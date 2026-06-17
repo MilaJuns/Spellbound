@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spellbound Marketing — Social Variations</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: #2b2622;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    padding: 64px;
+  }
+
+  .review-bar { margin: 0 auto 56px; color: var(--cream-100); max-width: 1180px; }
+  .review-bar .kicker { font-weight: 800; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--orange-400); margin: 0 0 14px; }
+  .review-bar h1 { font-family: var(--font-round); font-weight: 700; color: var(--cream-50); font-size: 34px; line-height: 1.15; margin: 0 0 12px; }
+  .review-bar p { color: rgba(245,237,224,.62); font-size: 15px; line-height: 1.6; margin: 0; max-width: 760px; }
+
+  .grid { display: flex; gap: 80px; align-items: flex-start; flex-wrap: wrap; }
+  figure { margin: 0; }
+  figcaption { color: var(--cream-100); margin-bottom: 22px; }
+  figcaption .tag { display: inline-block; font-weight: 800; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--maroon-950); background: var(--orange-400); padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; }
+  figcaption h2 { font-family: var(--font-round); font-weight: 700; font-size: 22px; margin: 0 0 6px; color: var(--cream-50); }
+  figcaption p { margin: 0; font-size: 14px; color: rgba(245,237,224,.6); }
+
+  .frame { position: relative; overflow: hidden; box-shadow: 0 40px 90px rgba(0,0,0,.45); font-family: var(--font-body); background: var(--cream-100); color: var(--ink-900); display: flex; flex-direction: column; }
+  .sq { width: 1080px; height: 1080px; }
+  .st { width: 1080px; height: 1920px; }
+  .sparkle { display: block; }
+
+  /* ---------- shared banner ---------- */
+  .banner { position: relative; overflow: hidden; display: flex; align-items: center; flex: none;
+    background: radial-gradient(120% 120% at 12% 30%, #6a0b0b 0%, rgba(106,11,11,0) 60%), var(--maroon-800); }
+  .banner .b-photo { position: absolute; top: 0; right: 0; height: 100%; width: 56%; object-fit: cover; object-position: 50% 30%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.5) 26%, #000 52%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.5) 26%, #000 52%); }
+  .banner .b-veil { position: absolute; top: 0; right: 0; height: 100%; width: 56%; z-index: 1;
+    background:
+      linear-gradient(to right, var(--maroon-800) 0%, rgba(81,8,8,.4) 40%, rgba(81,8,8,.12) 72%, rgba(81,8,8,.32) 100%),
+      linear-gradient(to bottom, rgba(81,8,8,.45) 0%, rgba(81,8,8,0) 30%, rgba(81,8,8,0) 68%, rgba(81,8,8,.5) 100%); }
+  .banner .b-text { position: relative; z-index: 2; }
+  .banner .brand { display: inline-flex; align-items: center; border-bottom: 1px solid var(--amber-tint); }
+  .banner .brand .sparkle { color: var(--orange-500); flex: none; }
+  .banner .brand .wm { font-family: var(--font-logo); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--cream-50); white-space: nowrap; }
+  .banner .brand .wm span { color: rgba(245,237,224,.6); }
+  .banner .b-who { border-left: 3px solid var(--orange-500); }
+  .banner .b-who b { display: block; font-family: var(--font-round); font-weight: 700; color: var(--cream-50); line-height: 1.1; }
+  .banner .b-who span { display: block; color: var(--orange-300); letter-spacing: .01em; }
+
+  /* ---------- shared hero ---------- */
+  .body-pad { display: flex; flex-direction: column; flex: 1; }
+  .hero .tagline { font-family: var(--font-script); font-style: italic; font-weight: 600; color: var(--orange-500); margin: 0; }
+  .hero h1 { font-family: var(--font-round); font-weight: 700; color: var(--ink-900); letter-spacing: -.015em; line-height: 1.05; margin: 0; text-wrap: balance; }
+  .hero h1 .accent { color: var(--orange-500); }
+  .hero .lead { color: var(--ink-700); line-height: 1.45; }
+
+  .mlabel { font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--amber-500); }
+
+  /* method rail */
+  .steps { display: flex; align-items: flex-start; }
+  .steps .cs { flex: 1; text-align: center; position: relative; }
+  .steps .cs .dot { position: relative; z-index: 1; border-radius: 999px; background: var(--maroon-800); color: var(--cream-100); font-family: var(--font-round); font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+  .steps .cs .ll { font-weight: 700; color: var(--ink-900); }
+  .steps .cs::after { content: ""; position: absolute; left: 50%; width: 100%; background: var(--amber-tint-strong); z-index: 0; }
+  .steps .cs:last-child::after { display: none; }
+
+  /* services */
+  .mods { display: flex; flex-direction: column; }
+  .mods .mod { display: flex; align-items: baseline; border-top: 1px solid var(--cream-border); }
+  .mods .mod:first-child { border-top: 0; }
+  .mods .mn { font-family: var(--font-round); font-weight: 700; color: var(--orange-500); flex: none; }
+  .mods .mt b { font-family: var(--font-round); font-weight: 700; color: var(--ink-900); }
+  .mods .mt span { color: var(--ink-700); line-height: 1.4; display: block; }
+
+  /* CTA band */
+  .cta { background: var(--maroon-800); color: var(--cream-100); display: flex; align-items: center; flex: none; }
+  .cta .sparkle { color: var(--orange-500); flex: none; }
+  .cta .txt { flex: 1; }
+  .cta .txt .big { font-family: var(--font-round); font-weight: 700; color: var(--cream-50); line-height: 1.15; margin: 0; }
+  .cta .txt .site { font-weight: 700; color: var(--orange-400); margin: 0; }
+  .qr-tile { flex: none; background: var(--cream-100); }
+  .qr-tile .qr svg { width: 100%; height: 100%; display: block; }
+
+  /* ========== SQUARE 1080 sizing ========== */
+  .sq .banner { height: 336px; }
+  .sq .banner .b-text { padding: 0 64px; }
+  .sq .banner .brand { gap: 15px; padding-bottom: 22px; margin-bottom: 24px; }
+  .sq .banner .brand .sparkle { width: 38px; height: 38px; }
+  .sq .banner .brand .wm { font-size: 24px; }
+  .sq .banner .b-who { padding-left: 18px; }
+  .sq .banner .b-who b { font-size: 32px; }
+  .sq .banner .b-who span { font-size: 17px; margin-top: 7px; }
+  .sq .body-pad { padding: 44px 64px; }
+  .sq .hero .tagline { font-size: 30px; margin-bottom: 16px; }
+  .sq .hero h1 { font-size: 58px; }
+  .sq .hero .lead { font-size: 23px; margin: 24px 0 0; max-width: 760px; }
+  .sq .mlabel { font-size: 15px; margin: 0 0 22px; }
+  .sq .method { margin-top: auto; padding-top: 36px; }
+  .sq .steps .cs .dot { width: 54px; height: 54px; font-size: 19px; margin-bottom: 14px; }
+  .sq .steps .cs .ll { font-size: 19px; }
+  .sq .steps .cs::after { top: 26px; height: 2px; }
+  .sq .cta { padding: 30px 64px; gap: 32px; }
+  .sq .cta .sparkle { width: 38px; height: 38px; }
+  .sq .cta .txt .big { font-size: 34px; margin-bottom: 12px; }
+  .sq .cta .txt .site { font-size: 21px; }
+  .sq .qr-tile { width: 150px; height: 150px; padding: 13px; border-radius: 14px; }
+
+  /* ========== STORY 1080×1920 sizing ========== */
+  .st .banner { height: 470px; }
+  .st .banner .b-text { padding: 0 70px; }
+  .st .banner .brand { gap: 16px; padding-bottom: 24px; margin-bottom: 26px; }
+  .st .banner .brand .sparkle { width: 42px; height: 42px; }
+  .st .banner .brand .wm { font-size: 27px; }
+  .st .banner .b-who { padding-left: 20px; }
+  .st .banner .b-who b { font-size: 38px; }
+  .st .banner .b-who span { font-size: 19px; margin-top: 8px; }
+  .st .body-pad { padding: 50px 70px; }
+  .st .hero .tagline { font-size: 31px; margin-bottom: 16px; }
+  .st .hero h1 { font-size: 62px; }
+  .st .hero .lead { font-size: 24px; margin: 26px 0 0; max-width: 880px; }
+  .st .method { margin-top: 42px; }
+  .st .mlabel { font-size: 17px; }
+  .st .method .rail-sub { font-family: var(--font-body); font-weight: 400; color: var(--ink-700); font-size: 21px; margin: 5px 0 24px; }
+  .st .steps .cs .dot { width: 58px; height: 58px; font-size: 22px; margin-bottom: 14px; }
+  .st .steps .cs .ll { font-size: 22px; }
+  .st .steps .cs::after { top: 28px; height: 2px; }
+  .st .services { margin-top: 42px; }
+  .st .services .mlabel { margin: 0 0 18px; }
+  .st .mods .mod { gap: 22px; padding: 15px 0; }
+  .st .mods .mn { font-size: 25px; width: 38px; }
+  .st .mods .mt b { font-size: 26px; }
+  .st .mods .mt span { font-size: 19px; margin-top: 3px; }
+  .st .cta { margin-top: auto; padding: 42px 70px; gap: 38px; }
+  .st .cta .sparkle { width: 46px; height: 46px; }
+  .st .cta .txt .big { font-size: 40px; margin-bottom: 13px; }
+  .st .cta .txt .site { font-size: 25px; }
+  .st .qr-tile { width: 180px; height: 180px; padding: 15px; border-radius: 16px; }
+
+  @media print { body { background:#fff; padding:0; } .review-bar, figcaption { display:none !important; } }
+</style>
+</head>
+<body>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#510000"/>
+      <path d="M50 24 L55 45 L76 50 L55 55 L50 76 L45 55 L24 50 L45 45 Z" fill="#F95F00"/>
+    </svg>
+  </template>
+  <div class="review-bar">
+    <p class="kicker">Spellbound Marketing · Social variations</p>
+    <h1>Square &amp; Story, from the Cream Method flyer</h1>
+    <p>Same banner, type and method system as the A4 — re-cut for feed (1080×1080) and story / reel (1080×1920). Live QR to the free diagnosis on both. The square leads with the hook + method; the story carries the full service menu.</p>
+  </div>
+
+  <div class="grid">
+    <!-- ============ SQUARE 1080 ============ -->
+    <figure>
+      <figcaption>
+        <span class="tag">Feed · 1:1</span>
+        <h2>Square — 1080 × 1080</h2>
+        <p>Instagram / LinkedIn feed. Hook + 4-step method + CTA.</p>
+      </figcaption>
+      <div class="frame sq" data-screen-label="Square 1080">
+        <div class="banner">
+          <img class="b-photo" src="../assets/photos/founder-portrait.jpeg" alt="Mila Juns">
+          <div class="b-veil"></div>
+          <div class="b-text">
+            <div class="brand">
+              <svg class="sparkle" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"></path></svg>
+              <div class="wm">Spellbound <span>Marketing</span></div>
+            </div>
+            <div class="b-who"><b>Mila Juns</b><span>Founder · 25 years of experience</span></div>
+          </div>
+        </div>
+        <div class="body-pad">
+          <div class="hero">
+            <p class="tagline">Strategy that captivates</p>
+            <h1>You know your craft. <span class="accent">We make sure the right market finds you.</span></h1>
+            <p class="lead">Strategic marketing for professionals and businesses in the Netherlands. Clarity before content.</p>
+          </div>
+          <div class="method">
+            <p class="mlabel">The Spellbound Method</p>
+            <div class="steps">
+              <div class="cs"><div class="dot">01</div><div class="ll">Diagnosis</div></div>
+              <div class="cs"><div class="dot">02</div><div class="ll">Direction</div></div>
+              <div class="cs"><div class="dot">03</div><div class="ll">Structure</div></div>
+              <div class="cs"><div class="dot">04</div><div class="ll">Execution</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cta">
+          <svg class="sparkle" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"></path></svg>
+          <div class="txt">
+            <p class="big">Get your free diagnosis here.</p>
+            <p class="site">spellboundmarketing.nl</p>
+          </div>
+          <div class="qr-tile"><div class="qr" data-qr="https://spellboundmarketing.nl"></div></div>
+        </div>
+      </div>
+    </figure>
+
+    <!-- ============ STORY 1080×1920 ============ -->
+    <figure>
+      <figcaption>
+        <span class="tag">Story · 9:16</span>
+        <h2>Story — 1080 × 1920</h2>
+        <p>Stories / Reels cover. Full service menu + CTA.</p>
+      </figcaption>
+      <div class="frame st" data-screen-label="Story 1080x1920">
+        <div class="banner">
+          <img class="b-photo" src="../assets/photos/founder-portrait.jpeg" alt="Mila Juns">
+          <div class="b-veil"></div>
+          <div class="b-text">
+            <div class="brand">
+              <svg class="sparkle" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"></path></svg>
+              <div class="wm">Spellbound <span>Marketing</span></div>
+            </div>
+            <div class="b-who"><b>Mila Juns</b><span>Founder · 25 years of experience</span></div>
+          </div>
+        </div>
+        <div class="body-pad">
+          <div class="hero">
+            <p class="tagline">Strategy that captivates</p>
+            <h1>You know your craft. <span class="accent">We make sure the right market finds you.</span></h1>
+            <p class="lead">Strategic marketing for professionals and businesses in the Netherlands. Clarity before content.</p>
+          </div>
+          <div class="method">
+            <p class="mlabel">The Spellbound Method</p>
+            <div class="steps">
+              <div class="cs"><div class="dot">01</div><div class="ll">Diagnosis</div></div>
+              <div class="cs"><div class="dot">02</div><div class="ll">Direction</div></div>
+              <div class="cs"><div class="dot">03</div><div class="ll">Structure</div></div>
+              <div class="cs"><div class="dot">04</div><div class="ll">Execution</div></div>
+            </div>
+          </div>
+          <div class="services">
+            <p class="mlabel">What we do · modular, no fixed packages</p>
+            <div class="mods">
+              <div class="mod"><span class="mn">01</span><div class="mt"><b>Strategy &amp; Positioning</b><span>Market analysis &amp; diagnosis, competitors, audience, and full strategy &amp; planning</span></div></div>
+              <div class="mod"><span class="mn">02</span><div class="mt"><b>Content &amp; Social Media</b><span>Instagram &amp; LinkedIn, editorial calendar, monthly analysis &amp; reports</span></div></div>
+              <div class="mod"><span class="mn">03</span><div class="mt"><b>Performance &amp; Paid Media</b><span>Meta &amp; Google Ads, Google Business Profile, local SEO</span></div></div>
+              <div class="mod"><span class="mn">04</span><div class="mt"><b>Digital Presence &amp; Conversion</b><span>Landing pages, website, email marketing, conversion funnels</span></div></div>
+              <div class="mod"><span class="mn">05</span><div class="mt"><b>Automation &amp; AI</b><span>Process automation, intelligent AI flows, integrations</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cta">
+          <svg class="sparkle" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"></path></svg>
+          <div class="txt">
+            <p class="big">Get your free diagnosis here.</p>
+            <p class="site">spellboundmarketing.nl</p>
+          </div>
+          <div class="qr-tile"><div class="qr" data-qr="https://spellboundmarketing.nl"></div></div>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+  <script>
+    document.querySelectorAll('.qr').forEach(function (el) {
+      var qr = qrcode(0, 'M');
+      qr.addData(el.getAttribute('data-qr'));
+      qr.make();
+      el.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+    });
+  </script>
+</body>
+</html>

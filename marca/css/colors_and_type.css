@@ -1,0 +1,246 @@
+/* ============================================================
+   SPELBOUND MARKETING — Colors & Type foundations
+   "Strategy that captivates"
+   Brand DNA adapted from the Mila Juns reference (Sábio archetype):
+   serene maroon, warm amber, cream — clarity over complexity.
+   ============================================================ */
+
+/* --- Brand display font (uploaded, self-hosted) --- */
+@font-face {
+  font-family: "Geometry Soft Pro";
+  src: url("fonts/Geometry_Soft_Pro-Bold_N.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- System fonts ---
+   Nunito          → body / UI (Mila Juns body face)
+   Varela Round    → rounded display cousin of the Geometry Soft Pro wordmark
+   Cormorant Italic→ the calligraphic tagline lockup only (Spelbound logo)     */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Varela+Round&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap");
+
+:root {
+  /* ---------------------------------------------------------
+     COLOR — Core brand  (values reconciled with Mila Juns)
+     --------------------------------------------------------- */
+  --maroon-950: #1A0000;   /* page floor / deepest */
+  --maroon-900: #3A0000;   /* cards on dark (MJ --card #3E0000) */
+  --maroon-800: #510000;   /* BASE brand surface (MJ --bx) */
+  --maroon-700: #720000;   /* raised surface (MJ --bm) */
+  --maroon-600: #990000;   /* strong maroon / CTA fill (MJ --bcta) */
+  --maroon-500: #B84A4A;   /* muted maroon, disabled */
+
+  --orange-600: #B8500A;   /* pressed accent */
+  --orange-500: #F95F00;   /* PRIMARY accent — the sparkle (Spelbound) */
+  --orange-400: #FF7A26;   /* hover accent */
+  --orange-300: #FFA866;   /* tint / highlight */
+
+  --amber-500: #D4600A;    /* Mila amber — labels, borders, secondary accent */
+  --amber-tint: rgba(212,96,10,0.18); /* signature thin amber border */
+  --amber-tint-strong: rgba(212,96,10,0.45);
+
+  --cream-50:  #FFFFFF;    /* pure white (MJ --wh) */
+  --cream-100: #F5EDE0;    /* BASE cream — light bg + text on maroon (MJ --cr) */
+  --cream-200: #EFE5D4;    /* slightly deeper cream */
+  --cream-300: rgba(245,237,224,0.66); /* secondary text on maroon */
+  --cream-400: rgba(245,237,224,0.42); /* muted / captions (MJ --muted) */
+  --cream-border: #E2D5BE;             /* hairline on cream */
+
+  --ink-900: #2A0B0B;      /* warm ink — text on cream */
+  --ink-700: #5A3232;      /* secondary text on cream */
+
+  /* semantic status (kept soft, from MJ dashboard) */
+  --ok:   #7FD47F;
+  --wip:  #FFB347;
+
+  /* ---------------------------------------------------------
+     COLOR — Semantic (default = DARK / maroon canvas)
+     --------------------------------------------------------- */
+  --bg:        var(--maroon-800);
+  --bg-deep:   var(--maroon-950);
+  --bg-raised: var(--maroon-700);
+  --surface:   var(--maroon-900);
+  --border:    var(--amber-tint);
+  --fg1:       var(--cream-100);   /* primary text */
+  --fg2:       var(--cream-300);   /* secondary text */
+  --fg3:       var(--cream-400);   /* tertiary / captions */
+  --accent:    var(--orange-500);
+  --accent-2:  var(--amber-500);
+  --accent-fg: var(--maroon-950);  /* text on orange fills */
+  --on-accent: var(--cream-50);
+
+  /* ---------------------------------------------------------
+     TYPE — Families
+     Varela Round is the shared family display face (aligns with Mila Juns).
+     Geometry Soft Pro is RESERVED for the locked Spelbound logo lockup only.
+     --------------------------------------------------------- */
+  --font-display: "Varela Round", "Geometry Soft Pro", system-ui, sans-serif;
+  --font-logo:    "Geometry Soft Pro", "Varela Round", system-ui, sans-serif;
+  --font-round:   "Varela Round", "Geometry Soft Pro", system-ui, sans-serif;
+  --font-script:  "Cormorant Garamond", "Georgia", serif;  /* italic tagline only */
+  --font-body:    "Nunito", system-ui, -apple-system, sans-serif;
+
+  /* ---------------------------------------------------------
+     TYPE — Scale (rem at 16px base)
+     --------------------------------------------------------- */
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.875rem;  /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-md:   1.125rem;  /* 18 */
+  --text-lg:   1.375rem;  /* 22 */
+  --text-xl:   1.75rem;   /* 28 */
+  --text-2xl:  2.25rem;   /* 36 */
+  --text-3xl:  3rem;      /* 48 */
+  --text-4xl:  4rem;      /* 64 */
+  --text-5xl:  5.5rem;    /* 88 */
+
+  --leading-tight: 1.06;
+  --leading-snug:  1.25;
+  --leading-body:  1.6;
+
+  --tracking-wordmark: 0.06em;
+  --tracking-display:  0.01em;
+  --tracking-eyebrow:  0.18em;  /* MJ uses ~0.18em on labels */
+
+  /* ---------------------------------------------------------
+     SPACING — 4px base scale
+     --------------------------------------------------------- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.5rem;   --space-6: 2rem;
+  --space-7: 3rem;     --space-8: 4rem;     --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---------------------------------------------------------
+     RADII — tight & calm (Mila Juns uses ~8px)
+     --------------------------------------------------------- */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   18px;
+  --radius-pill: 999px;
+
+  /* ---------------------------------------------------------
+     SHADOW / ELEVATION — warm, restrained; depth via amber borders
+     --------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(26,0,0,0.30);
+  --shadow-md: 0 6px 20px rgba(26,0,0,0.30);
+  --shadow-lg: 0 18px 48px rgba(26,0,0,0.38);
+  --shadow-accent: 0 8px 24px rgba(249,95,0,0.28);
+
+  /* ---------------------------------------------------------
+     MOTION — serene; gentle fades + rises, no bounce
+     --------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);  /* @kind other */
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);  /* @kind other */
+  --dur-fast: 150ms;  /* @kind other */
+  --dur-mid:  260ms;  /* @kind other */
+  --dur-slow: 520ms;  /* @kind other */
+}
+
+/* ============================================================
+   LIGHT THEME — cream canvas, maroon ink
+   ============================================================ */
+[data-theme="light"] {
+  --bg:        var(--cream-100);
+  --bg-deep:   var(--cream-200);
+  --bg-raised: var(--cream-50);
+  --surface:   var(--cream-50);
+  --border:    var(--cream-border);
+  --fg1:       var(--ink-900);
+  --fg2:       var(--ink-700);
+  --fg3:       var(--maroon-500);
+  --accent:    var(--orange-500);
+  --accent-fg: var(--cream-50);
+  --on-accent: var(--cream-50);
+}
+
+/* ============================================================
+   SEMANTIC TYPE PRESETS
+   ============================================================ */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--amber-500);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wordmark);
+  text-transform: uppercase;
+  color: var(--fg1);
+  line-height: var(--leading-tight);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-4xl);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+  color: var(--fg1);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-3xl);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+  color: var(--fg1);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  color: var(--fg1);
+}
+h3, .h3 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--fg1);
+}
+
+/* The calligraphic tagline / pull-quote treatment (use sparingly) */
+.script {
+  font-family: var(--font-script);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  line-height: 1.18;
+  color: var(--fg1);
+}
+
+p, .body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--fg2);
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-md);
+  line-height: 1.55;
+  color: var(--fg1);
+}
+
+small, .caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--fg3);
+}
+
+code, .mono {
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.92em;
+}

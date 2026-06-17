@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spellbound Marketing — Flyer Options (A4)</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: #2b2622;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    padding: 64px 64px 96px;
+  }
+
+  /* ---------- review chrome (screen only) ---------- */
+  .review-bar { max-width: 980px; margin: 0 auto 56px; color: var(--cream-100); }
+  .review-bar .kicker {
+    font-family: var(--font-body); font-weight: 800; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--orange-400);
+    margin: 0 0 14px;
+  }
+  .review-bar h1 {
+    font-family: var(--font-round); font-weight: 700; color: var(--cream-50);
+    font-size: 34px; line-height: 1.15; margin: 0 0 12px; letter-spacing: .01em;
+  }
+  .review-bar p { color: rgba(245,237,224,.62); font-size: 15px; line-height: 1.6; margin: 0; max-width: 720px; }
+
+  .grid { display: flex; gap: 80px; align-items: flex-start; }
+  figure { margin: 0; }
+  figcaption { color: var(--cream-100); margin-bottom: 22px; max-width: 794px; }
+  figcaption .tag {
+    display: inline-block; font-family: var(--font-body); font-weight: 800; font-size: 11px;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--maroon-950);
+    background: var(--orange-400); padding: 5px 10px; border-radius: 999px; margin-bottom: 12px;
+  }
+  figcaption h2 { font-family: var(--font-round); font-weight: 700; font-size: 22px; margin: 0 0 6px; color: var(--cream-50); }
+  figcaption p { margin: 0; font-size: 14px; color: rgba(245,237,224,.6); line-height: 1.55; }
+
+  /* ---------- A4 flyer base ---------- */
+  .flyer {
+    width: 794px; height: 1123px; position: relative; overflow: hidden;
+    box-shadow: 0 40px 90px rgba(0,0,0,.45);
+    font-family: var(--font-body);
+  }
+  .sparkle { display: block; }
+  .wm {
+    font-family: var(--font-logo); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .07em; line-height: 1;
+  }
+
+  /* ===================================================
+     DIRECTION A — Editorial Maroon (type-led, premium)
+     =================================================== */
+  .fa {
+    background:
+      radial-gradient(120% 80% at 50% -10%, #6a0b0b 0%, rgba(106,11,11,0) 55%),
+      var(--maroon-800);
+    color: var(--cream-100);
+    padding: 72px 70px 64px;
+    display: flex; flex-direction: column;
+  }
+  .fa-head { text-align: center; }
+  .fa-head .sparkle { width: 40px; height: 40px; color: var(--orange-500); margin: 0 auto 20px; }
+  .fa-head .wm { font-size: 22px; color: var(--cream-100); }
+  .fa-head .wm span { color: rgba(245,237,224,.55); }
+  .fa-head .tagline { font-family: var(--font-script); font-style: italic; font-weight: 500; color: var(--orange-300); font-size: 22px; margin-top: 10px; }
+
+  .fa-hero { text-align: center; margin-top: 76px; }
+  .fa-hero .eyebrow { color: var(--amber-500); font-weight: 800; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; margin: 0 0 26px; }
+  .fa-hero h1 {
+    font-family: var(--font-round); font-weight: 700; color: var(--cream-50);
+    font-size: 56px; line-height: 1.05; letter-spacing: -.01em; margin: 0; text-wrap: balance;
+  }
+  .fa-hero h1 .accent { color: var(--orange-500); }
+  .fa-hero .lead { color: rgba(245,237,224,.72); font-size: 19px; line-height: 1.55; margin: 30px auto 0; max-width: 540px; text-wrap: pretty; }
+
+  .fa-person { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 40px; }
+  .fa-person img { width: 58px; height: 58px; border-radius: 999px; object-fit: cover; object-position: 50% 48%; border: 1.5px solid var(--amber-tint-strong); }
+  .fa-person .who { text-align: left; }
+  .fa-person .who b { display: block; font-family: var(--font-round); color: var(--cream-50); font-size: 16px; font-weight: 700; }
+  .fa-person .who span { font-size: 13px; color: rgba(245,237,224,.55); }
+
+  .fa-method { margin-top: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--amber-tint); border-bottom: 1px solid var(--amber-tint); }
+  .fa-method .step { padding: 22px 8px; text-align: center; border-right: 1px solid var(--amber-tint); }
+  .fa-method .step:last-child { border-right: 0; }
+  .fa-method .step .n { display: block; font-family: var(--font-round); color: var(--orange-500); font-size: 13px; font-weight: 700; letter-spacing: .08em; margin-bottom: 7px; }
+  .fa-method .step .l { font-weight: 700; font-size: 15px; color: var(--cream-100); letter-spacing: .01em; }
+
+  .fa-cta { display: flex; align-items: center; gap: 26px; margin-top: 38px; }
+  .fa-cta .txt { flex: 1; }
+  .fa-cta .txt .k { color: var(--amber-500); font-weight: 800; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 9px; }
+  .fa-cta .txt .big { font-family: var(--font-round); font-weight: 700; color: var(--cream-50); font-size: 25px; line-height: 1.18; margin: 0 0 12px; }
+  .fa-cta .txt .site { font-weight: 700; font-size: 15px; color: var(--orange-400); margin: 0; letter-spacing: .01em; }
+  .qr-tile { width: 118px; height: 118px; flex: none; background: var(--cream-100); border-radius: 12px; padding: 11px; }
+  .qr-tile .qr { width: 100%; height: 100%; }
+  .qr-tile .qr svg { width: 100%; height: 100%; display: block; }
+
+  /* ===================================================
+     DIRECTION B — Photo-led split (human / trust)
+     =================================================== */
+  .fb { background: var(--cream-100); color: var(--ink-900); display: flex; flex-direction: column; }
+  .fb-photo { position: relative; height: 498px; flex: none; overflow: hidden; background: var(--maroon-900); }
+  .fb-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+  .fb-photo .veil { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,0,0,.55) 0%, rgba(26,0,0,0) 26%, rgba(26,0,0,0) 58%, rgba(81,0,0,.92) 100%); }
+  .fb-photo .topline { position: absolute; top: 40px; left: 54px; right: 54px; display: flex; align-items: center; gap: 13px; }
+  .fb-photo .topline .sparkle { width: 30px; height: 30px; color: var(--orange-500); flex: none; }
+  .fb-photo .topline .wm { font-size: 18px; color: var(--cream-50); }
+  .fb-photo .topline .wm span { color: rgba(245,237,224,.6); }
+  .fb-photo .tagline { position: absolute; left: 54px; bottom: 30px; font-family: var(--font-script); font-style: italic; font-weight: 500; color: var(--cream-50); font-size: 27px; }
+
+  .fb-body { flex: 1; padding: 44px 54px 50px; display: flex; flex-direction: column; }
+  .fb-body .eyebrow { color: var(--amber-500); font-weight: 800; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 20px; }
+  .fb-body h1 { font-family: var(--font-round); font-weight: 700; color: var(--ink-900); font-size: 41px; line-height: 1.08; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+  .fb-body h1 .accent { color: var(--orange-500); }
+  .fb-body .lead { color: var(--ink-700); font-size: 17px; line-height: 1.5; margin: 20px 0 0; max-width: 560px; }
+
+  .fb-steps { display: flex; align-items: flex-start; margin-top: 30px; }
+  .fb-steps .s { flex: 1; text-align: center; position: relative; }
+  .fb-steps .s .dot { width: 34px; height: 34px; border-radius: 999px; background: var(--maroon-800); color: var(--cream-100); font-family: var(--font-round); font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+  .fb-steps .s .ll { font-weight: 700; font-size: 13.5px; color: var(--ink-900); }
+  .fb-steps .s::after { content: ""; position: absolute; top: 17px; left: 50%; width: 100%; height: 1.5px; background: var(--amber-tint-strong); z-index: 0; }
+  .fb-steps .s:last-child::after { display: none; }
+  .fb-steps .s .dot { position: relative; z-index: 1; }
+
+  .fb-cta { margin-top: auto; display: flex; align-items: center; gap: 22px; background: var(--maroon-800); border-radius: 14px; padding: 22px 26px; }
+  .fb-cta .txt { flex: 1; }
+  .fb-cta .txt .k { color: var(--orange-400); font-weight: 800; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 7px; }
+  .fb-cta .txt .big { font-family: var(--font-round); font-weight: 700; color: var(--cream-50); font-size: 22px; line-height: 1.15; margin: 0 0 9px; }
+  .fb-cta .txt .site { font-weight: 700; font-size: 14px; color: var(--cream-100); margin: 0; }
+  .fb-cta .qr-tile { width: 104px; height: 104px; padding: 9px; border-radius: 10px; }
+
+  /* ===================================================
+     DIRECTION C — Light cream, method-forward (brochure)
+     =================================================== */
+  .fc { background: var(--cream-100); color: var(--ink-900); padding: 0 58px 0; display: flex; flex-direction: column; }
+
+  .fc-banner {
+    margin: 0 -58px; position: relative; height: 332px; overflow: hidden;
+    display: flex; align-items: center;
+    background:
+      radial-gradient(120% 120% at 12% 30%, #6a0b0b 0%, rgba(106,11,11,0) 60%),
+      var(--maroon-800);
+  }
+  .fc-banner .b-photo { position: absolute; top: 0; right: 0; height: 100%; width: 56%; object-fit: cover; object-position: 50% 30%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.5) 26%, #000 52%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.5) 26%, #000 52%); }
+  .fc-banner .b-veil { position: absolute; top: 0; right: 0; height: 100%; width: 56%; z-index: 1;
+    background:
+      linear-gradient(to right, var(--maroon-800) 0%, rgba(81,8,8,.4) 40%, rgba(81,8,8,.12) 72%, rgba(81,8,8,.32) 100%),
+      linear-gradient(to bottom, rgba(81,8,8,.45) 0%, rgba(81,8,8,0) 30%, rgba(81,8,8,0) 68%, rgba(81,8,8,.5) 100%); }
+  .fc-banner .b-text { position: relative; z-index: 2; padding: 0 58px; }
+  .fc-banner .brand { display: inline-flex; align-items: center; gap: 13px; padding-bottom: 20px; margin-bottom: 22px; border-bottom: 1px solid var(--amber-tint); }
+  .fc-banner .brand .sparkle { width: 32px; height: 32px; color: var(--orange-500); flex: none; }
+  .fc-banner .brand .wm { font-size: 19px; color: var(--cream-50); white-space: nowrap; }
+  .fc-banner .brand .wm span { color: rgba(245,237,224,.6); }
+  .fc-banner .b-who { padding-left: 16px; border-left: 3px solid var(--orange-500); }
+  .fc-banner .b-who b { display: block; font-family: var(--font-round); font-weight: 700; font-size: 26px; color: var(--cream-50); line-height: 1.1; }
+  .fc-banner .b-who span { display: block; font-size: 14px; color: var(--orange-300); margin-top: 6px; letter-spacing: .01em; }
+
+  .fc-hero { margin-top: 36px; }
+  .fc-hero .tagline { font-family: var(--font-script); font-style: italic; font-weight: 600; color: var(--orange-500); font-size: 24px; margin: 0 0 14px; }
+  .fc-hero h1 { font-family: var(--font-round); font-weight: 700; color: var(--ink-900); font-size: 40px; line-height: 1.05; letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+  .fc-hero h1 .accent { color: var(--orange-500); }
+  .fc-hero .lead { color: var(--ink-700); font-size: 16px; line-height: 1.45; margin: 15px 0 0; max-width: 600px; }
+
+  .fc .mlabel { font-weight: 800; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--amber-500); margin: 0 0 13px; }
+
+  .fc-rail { margin-top: 30px; }
+  .fc-rail .mlabel { margin: 0 0 3px; }
+  .fc-rail .rail-sub { font-family: var(--font-body); font-weight: 400; font-size: 13px; color: var(--ink-700); margin: 0 0 18px; }
+  .fc-steps { display: flex; align-items: flex-start; }
+  .fc-steps .cs { flex: 1; text-align: center; position: relative; }
+  .fc-steps .cs .dot { position: relative; z-index: 1; width: 38px; height: 38px; border-radius: 999px; background: var(--maroon-800); color: var(--cream-100); font-family: var(--font-round); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+  .fc-steps .cs .ll { font-weight: 700; font-size: 14px; color: var(--ink-900); }
+  .fc-steps .cs::after { content: ""; position: absolute; top: 18px; left: 50%; width: 100%; height: 1.5px; background: var(--amber-tint-strong); z-index: 0; }
+  .fc-steps .cs::before { content: "\2192"; position: absolute; top: 18px; left: 100%; transform: translate(-50%, -50%); color: var(--amber-500); font-size: 15px; line-height: 1; z-index: 2; background: var(--cream-100); padding: 0 4px; }
+  .fc-steps .cs:last-child::after, .fc-steps .cs:last-child::before { display: none; }
+
+  .fc-services { margin-top: 28px; }
+  .fc-mods { display: flex; flex-direction: column; }
+  .fc-mods .mod { display: flex; align-items: baseline; gap: 15px; padding: 12px 0; border-top: 1px solid var(--cream-border); }
+  .fc-mods .mod:first-child { border-top: 0; padding-top: 0; }
+  .fc-mods .mn { font-family: var(--font-round); font-weight: 700; color: var(--orange-500); font-size: 15px; flex: none; width: 24px; }
+  .fc-mods .mt { display: flex; flex-direction: column; gap: 2px; }
+  .fc-mods .mt b { font-family: var(--font-round); font-weight: 700; color: var(--ink-900); font-size: 17px; }
+  .fc-mods .mt span { color: var(--ink-700); font-size: 13.5px; line-height: 1.4; }
+
+  .fc-cta { margin: auto -58px 0; background: var(--maroon-800); color: var(--cream-100); padding: 34px 58px; display: flex; align-items: center; gap: 26px; }
+  .fc-cta .sparkle { width: 28px; height: 28px; color: var(--orange-500); flex: none; }
+  .fc-cta .txt { flex: 1; }
+  .fc-cta .txt .big { font-family: var(--font-round); font-weight: 700; color: var(--cream-50); font-size: 25px; line-height: 1.15; margin: 0 0 9px; }
+  .fc-cta .txt .site { font-weight: 700; font-size: 15px; color: var(--orange-400); margin: 0; }
+  .fc-cta .qr-tile { width: 110px; height: 110px; padding: 10px; }
+
+  /* ---------- print: each flyer = one A4 page ---------- */
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .review-bar, figcaption { display: none !important; }
+    .grid { display: block; }
+    figure { margin: 0; }
+    .flyer { box-shadow: none; page-break-after: always; }
+    figure:last-child .flyer { page-break-after: auto; }
+  }
+</style>
+</head>
+<body>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#510000"/>
+      <path d="M50 24 L55 45 L76 50 L55 55 L50 76 L45 55 L24 50 L45 45 Z" fill="#F95F00"/>
+    </svg>
+  </template>
+  <div class="grid">
+    <!-- ============ DIRECTION C ============ -->
+    <figure>
+      <div class="flyer fc" data-screen-label="Flyer C">
+        <div class="fc-banner">
+          <img class="b-photo" src="../assets/photos/founder-portrait.jpeg" alt="Mila Juns">
+          <div class="b-veil"></div>
+          <div class="b-text">
+            <div class="brand">
+              <svg class="sparkle" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"></path></svg>
+              <div class="wm">Spellbound <span>Marketing</span></div>
+            </div>
+            <div class="b-who"><b>Mila Juns</b><span>Founder · 25 years of experience</span></div>
+          </div>
+        </div>
+
+        <div class="fc-hero">
+          <p class="tagline">Strategy that captivates</p>
+          <h1>You know your craft.<br><span class="accent">We make sure<br>the right market finds you.</span></h1>
+          <p class="lead">Strategic marketing for professionals and businesses in the Netherlands.<br>Clarity before content.</p>
+        </div>
+
+        <div class="fc-rail">
+          <p class="mlabel">The Spellbound Method</p>
+          <div class="fc-steps">
+            <div class="cs"><div class="dot">01</div><div class="ll">Diagnosis</div></div>
+            <div class="cs"><div class="dot">02</div><div class="ll">Direction</div></div>
+            <div class="cs"><div class="dot">03</div><div class="ll">Structure</div></div>
+            <div class="cs"><div class="dot">04</div><div class="ll">Execution</div></div>
+          </div>
+        </div>
+
+        <div class="fc-services">
+          <p class="mlabel">What we do · modular, no fixed packages</p>
+          <div class="fc-mods">
+            <div class="mod"><span class="mn">01</span><div class="mt"><b>Strategy &amp; Positioning</b><span>Market analysis &amp; diagnosis, competitors, audience, and full strategy &amp; planning</span></div></div>
+            <div class="mod"><span class="mn">02</span><div class="mt"><b>Content &amp; Social Media</b><span>Instagram &amp; LinkedIn, editorial calendar, monthly analysis &amp; reports</span></div></div>
+            <div class="mod"><span class="mn">03</span><div class="mt"><b>Performance &amp; Paid Media</b><span>Meta &amp; Google Ads, Google Business Profile, local SEO</span></div></div>
+            <div class="mod"><span class="mn">04</span><div class="mt"><b>Digital Presence &amp; Conversion</b><span>Landing pages, website, email marketing, conversion funnels</span></div></div>
+            <div class="mod"><span class="mn">05</span><div class="mt"><b>Automation &amp; AI</b><span>Process automation, intelligent AI flows, integrations</span></div></div>
+          </div>
+        </div>
+
+        <div class="fc-cta">
+          <svg class="sparkle" viewBox="0 0 100 100" fill="currentColor"><path d="M50 2 L58 42 L98 50 L58 58 L50 98 L42 58 L2 50 L42 42 Z"></path></svg>
+          <div class="txt">
+            <p class="big">Get your free diagnosis here.</p>
+            <p class="site">spellboundmarketing.nl</p>
+          </div>
+          <div class="qr-tile"><div class="qr" data-qr="https://spellboundmarketing.nl"></div></div>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+  <script>
+    document.querySelectorAll('.qr').forEach(function (el) {
+      var qr = qrcode(0, 'M');
+      qr.addData(el.getAttribute('data-qr'));
+      qr.make();
+      el.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spelbound — Pitch Deck Template</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: #1c0303; overflow: hidden; }
+  #stage { position: fixed; inset: 0; display: grid; place-items: center; }
+  #frame-wrap {
+    width: 1280px; height: 720px; transform-origin: center center;
+    box-shadow: 0 30px 90px rgba(0,0,0,.5); border-radius: 6px; overflow: hidden;
+    background: #500000;
+  }
+  iframe { width: 1280px; height: 720px; border: 0; display: block; }
+  .nav {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 16px; z-index: 10;
+    background: rgba(28,3,3,.78); backdrop-filter: blur(10px);
+    padding: 9px 14px; border-radius: 999px; border: 1px solid #7A2424;
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+  }
+  .nav button {
+    width: 38px; height: 38px; border-radius: 999px; cursor: pointer;
+    border: 1px solid #7A2424; background: transparent; color: #ECE3D0;
+    font-size: 17px; display: grid; place-items: center; transition: all .14s;
+  }
+  .nav button:hover { background: #F95F00; border-color: #F95F00; color: #fff; }
+  .nav .count { color: #DFD3BC; font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div id="stage"><div id="frame-wrap"><iframe id="slide" src="slide-01-title.html" title="slide"></iframe></div></div>
+<div class="nav">
+  <button id="prev" aria-label="Previous">‹</button>
+  <span class="count" id="count">1 / 6</span>
+  <button id="next" aria-label="Next">›</button>
+</div>
+<script>
+  const slides = [
+    "slide-01-title.html", "slide-02-statement.html", "slide-03-services.html",
+    "slide-07-about.html", "slide-04-results.html", "slide-05-quote.html", "slide-06-closing.html",
+  ];
+  let i = parseInt(localStorage.getItem("spelbound-deck-pos") || "0", 10);
+  if (isNaN(i) || i < 0 || i >= slides.length) i = 0;
+  const frame = document.getElementById("slide");
+  const count = document.getElementById("count");
+  function render() {
+    frame.src = slides[i];
+    count.textContent = (i + 1) + " / " + slides.length;
+    localStorage.setItem("spelbound-deck-pos", i);
+  }
+  function go(d) { i = (i + d + slides.length) % slides.length; render(); }
+  document.getElementById("prev").onclick = () => go(-1);
+  document.getElementById("next").onclick = () => go(1);
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight" || e.key === " ") go(1);
+    if (e.key === "ArrowLeft") go(-1);
+  });
+  function fit() {
+    const wrap = document.getElementById("frame-wrap");
+    const s = Math.min(window.innerWidth / 1280, window.innerHeight / 720) * 0.92;
+    wrap.style.transform = "scale(" + s + ")";
+  }
+  window.addEventListener("resize", fit);
+  fit(); render();
+</script>
+</body>
+</html>
